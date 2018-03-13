@@ -1,13 +1,13 @@
 机房屏幕的监控的一些工具及相关信息
 ===================
-
+工具有空会上传
 
 ### 幻影云
 -  [软件公司](http://www.phantosys.net/)
 -  [参与大学列表](http://www.phantosys.net/hyy/cgal_jy.html)
 
 ### 键盘拦截测试
-![测试图片](https://github.com/dcLunatic/Tool/blob/master/computeRoom/%E6%9C%BA%E6%88%BF%E9%94%AE%E7%9B%98%E6%B5%8B%E8%AF%95.png)
+![测试图片](https://github.com/dcLunatic/Tool/blob/master/computeRoom/keyboardTest.png)
 
 ### 广东金融学院
 - 幻影云版本:
@@ -20,6 +20,7 @@
 ### 简单破解思路（☆☆☆☆☆）
 - 将进程StudentMain.exe进程关闭即可
 - 任务管理器->资源监视器(也可已直接使用resmon打开)->找到StudentMain.exe->右键，挂起即可
+    - 也可以使用程序实现（SuspendThread(HANDLE) ResumeThread(HANDLE))
 
 
 ### 初级破解思路（★★☆☆☆）
@@ -43,7 +44,9 @@
 
 前提：一台电脑装学生端，一台电脑装教师端。
 #### 教师端操作，然后在学生端这边，使用抓包工具，如WireShark等，抓取分析后处理即可。
-然后，基于抓包分析，分析出教师端ip地址mac地址等信息，然后模仿教师端发送数据包给其他的学生端，模拟教师端功能。
+然后，基于抓包分析，分析出教师端ip地址mac地址通讯port等信息，然后模仿教师端发送数据包给其他的学生端，模拟教师端功能。
+这里推荐一篇[博客](http://blog.csdn.net/envon123/article/details/9245831)以供参考
 
-注:注入打开进程的时候，考虑使用ZwOpenProcessAPI，而不是使用OpenProcessAPI，因为这个已被拦截。
-当然，如果你对免杀有一定了解，还有更加丰富的手段来达到目的。
+
+**注:注入打开进程的时候，考虑使用ZwOpenProcessAPI，而不是使用OpenProcessAPI，因为这个已被拦截。
+当然，如果你对免杀有一定了解，还有更加丰富的手段来达到目的。**
