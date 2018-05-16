@@ -1,7 +1,7 @@
 @echo off
 
 if not "%1"=="" goto :crack
-echo Çë½«libTDMaster.dllÍÏ¶¯µ½¸ÃÅú´¦ÀíÎÄ¼ş
+echo è¯·å°†libTDMaster.dllæ‹–åŠ¨åˆ°è¯¥æ‰¹å¤„ç†æ–‡ä»¶
 pause>nul
 goto :end
 
@@ -13,9 +13,9 @@ taskkill /f /t /im PhantosysClientService.exe
 taskkill /f /t /im MasterHelper.exe
 
 del /f "C:\Program Files (x86)\Phantosys\PhantosysCloud v5.0 2014 standard\libTDMaster.dll"
-move %1 "C:\Program Files (x86)\Phantosys\PhantosysCloud v5.0 2014 standard\libTDMaster.dll"
+copy %1 "C:\Program Files (x86)\Phantosys\PhantosysCloud v5.0 2014 standard\libTDMaster.dll"
 
 "C:\Program Files (x86)\Phantosys\PhantosysCloud v5.0 2014 standard\StudentMain.exe"
-echo ÉÏÃæÈç¹û³É¹¦ÒÆ¶¯ÎÄ¼ş£¬Ôò±íÊ¾³É¹¦ÁË¡£
+echo ä¸Šé¢å¦‚æœæˆåŠŸå¤åˆ¶æ–‡ä»¶ï¼Œåˆ™è¡¨ç¤ºæˆåŠŸäº†ã€‚
 ping 127.0.0.1 > nul
 :end
